@@ -33,3 +33,6 @@ Route::controller(ProfileController::class)->prefix('admin')->group(function() {
 // Route::controller(AAA::class)->group(function(){
 //     Route::get('XXX', 'bbb')
 // });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
